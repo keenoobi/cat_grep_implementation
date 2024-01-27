@@ -1,5 +1,5 @@
-CC= gcc
-CFLAGS = -std=c11 -Wall -Werror -Wextra
+CC=gcc
+CFLAGS=-std=c11 -Wall -Werror -Wextra
 NAME= s21_grep
 
 
@@ -14,9 +14,6 @@ test: rebuild
 
 clang:
 	clang-format -style=Google -n *.c *.h
-
-docker: $(NAME).c
-	$(CC) -g $^ $(CFLAGS) -o $(NAME)
 	
 rebuild: clean all
 

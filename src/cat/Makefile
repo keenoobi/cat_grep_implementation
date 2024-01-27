@@ -15,9 +15,6 @@ test: rebuild
 clang:
 	clang-format -style=Google -n *.c *.h
 
-docker: $(NAME).c
-	$(CC) -g $^ $(CFLAGS) -o $(NAME)
-
 rebuild: clean all
 
 clean:
